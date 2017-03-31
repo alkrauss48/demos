@@ -42,6 +42,7 @@ GEM
     builder (3.2.3)
     byebug (9.0.6)
     concurrent-ruby (1.0.5)
+    connection_pool (2.2.1)
     erubis (2.7.0)
     ffi (1.9.18)
     globalid (0.3.7)
@@ -65,6 +66,8 @@ GEM
       mini_portile2 (~> 2.1.0)
     puma (3.8.2)
     rack (2.0.1)
+    rack-protection (1.5.3)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.2)
@@ -94,6 +97,12 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
+    redis (3.3.3)
+    sidekiq (4.2.10)
+      concurrent-ruby (~> 1.0)
+      connection_pool (~> 2.2, >= 2.2.0)
+      rack-protection (>= 1.5.0)
+      redis (~> 3.2, >= 3.2.1)
     spring (2.0.1)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -122,7 +131,8 @@ DEPENDENCIES
   byebug
   listen (~> 3.0.5)
   puma (~> 3.0)
-  rails (~> 5.0.2)
+  rails (~> 5.0.1)
+  sidekiq
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
